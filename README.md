@@ -1,3 +1,5 @@
+[![CI](https://github.com/TheProblemShredder/ScrollCert_vOmega_PublicDemo/actions/workflows/ci.yml/badge.svg)](https://github.com/TheProblemShredder/ScrollCert_vOmega_PublicDemo/actions/workflows/ci.yml)
+
 # ScrollCert vΩ — Verification-First Research Demo
 
 A minimal, reproducible demonstration of a **verification-first workflow** for research/engineering claims:
@@ -13,6 +15,11 @@ preregistration → controls → ablations → blinded evaluation → Φ decisio
 
 > This repo uses synthetic metrics to demonstrate the methodology.  
 > The same scaffolding is designed to wrap real experiments/adapters.
+
+## What to open first (30 seconds)
+- `docs/protocol_vomega.md` — the verification-first protocol in plain English
+- `src/gates.py` — the PASS/FAIL gate logic (falsification + delta)
+- `outputs/phi_card.md` — example decision card (generated locally)
 
 ## Quickstart
 
