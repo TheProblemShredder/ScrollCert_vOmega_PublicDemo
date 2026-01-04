@@ -1,0 +1,10 @@
+{
+  "ablation_id": "abl_v1",
+  "description": "Demo ablation: degrade main score distribution to simulate a broken method",
+  "expected_effect": "score drops, delta shrinks",
+  "delta_gate": {
+    "metric": "delta",
+    "threshold": 0.05,
+    "direction": "greater_or_equal"
+  }
+}

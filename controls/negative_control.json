@@ -1,0 +1,5 @@
+{
+  "control_id": "negative_control_v1",
+  "description": "Deliberately weak control expected to FAIL",
+  "expected_outcome": "FAIL"
+}

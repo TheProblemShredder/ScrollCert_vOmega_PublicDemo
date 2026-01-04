@@ -1,0 +1,11 @@
+{
+  "claim_id": "example_claim_v1",
+  "description": "Placeholder claim for ScrollCert v\u03a9 demo",
+  "hypothesis": "Metric exceeds baseline under controlled conditions",
+  "falsification": {
+    "metric": "score",
+    "threshold": 0.5,
+    "direction": "greater_than"
+  },
+  "notes": "This is a demo preregistration, not a real scientific claim."
+}
