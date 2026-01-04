@@ -30,3 +30,11 @@ Run (blinded):
 - `evidence_capsule.ABLATED.json`
 - `ledger.ndjson`
 - `blind_map.json` / `reveal.json` (when `--blind`)
+## How to talk about this in interviews (30 seconds)
+“I built a verification-first scaffold that forces claims to pass preregistration, negative controls, ablations, and blinded evaluation before I trust results. It emits deterministic IDs and an append-only ledger for audit. This repo is a minimal public demo of that methodology — the same pattern wraps real experiments and prevents self-deception in research and ML/quant workflows.”
+
+## Skills demonstrated
+- Python tooling & reproducible experiment scaffolds
+- Deterministic hashing / audit IDs (content-addressed style)
+- CI automation (GitHub Actions)
+- Research engineering discipline (controls/ablations/blinding)
