@@ -1,26 +1,32 @@
 # ScrollCert vΩ — Verification-First Research Demo
 
-This repo demonstrates a verification-first workflow:
+A minimal, reproducible demonstration of a **verification-first workflow** for research/engineering claims:
+preregistration → controls → ablations → blinded evaluation → Φ decision → audit ledger.
 
-- Preregistration (metric/threshold/direction)
-- Negative control
-- Ablation discipline (delta gate)
-- Φ decision (PASS/FAIL) with gate details
-- Blinded evaluation mode (ARM labels until reveal)
-- AEQ–CID IDs + content-hash evidence spine
-- Append-only ledger (outputs/ledger.ndjson)
+## What this shows
+- **Preregistration** of a claim with thresholds (before seeing results)
+- **Negative control** expected to fail (sanity check)
+- **Ablation discipline**: remove a component and verify signal drops (delta gate)
+- **Blinded evaluation**: arms are hidden until reveal (reduces experimenter bias)
+- **Deterministic IDs (AEQ–CID)** + content-hash evidence spine
+- **Append-only audit ledger** (`outputs/ledger.ndjson`) for traceability
+
+> This repo uses synthetic metrics to demonstrate the methodology.  
+> The same scaffolding is designed to wrap real experiments/adapters.
 
 ## Quickstart
 
 Run (standard):
-  ./run.py
+    ./run.py
 
 Run (blinded):
-  ./run.py --blind --salt "demo_salt_001"
+    rm -f outputs/ledger.ndjson
+    ./run.py --blind --salt "demo_salt_001"
+    head -n 40 outputs/phi_card.md
 
-Outputs (generated under outputs/):
-- phi_card.md
-- evidence_capsule.BASELINE.json
-- evidence_capsule.ABLATED.json
-- ledger.ndjson
-- blind_map.json / reveal.json (when --blind)
+## Outputs (generated under `outputs/`)
+- `phi_card.md`
+- `evidence_capsule.BASELINE.json`
+- `evidence_capsule.ABLATED.json`
+- `ledger.ndjson`
+- `blind_map.json` / `reveal.json` (when `--blind`)

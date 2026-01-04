@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  run-demo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run demo (blinded)
+        run: |
+          chmod +x run.py
+          rm -f outputs/ledger.ndjson || true
+          ./run.py --blind --salt "ci_salt_001"
+          test -f outputs/phi_card.md
+          grep -q "Φ Decision Card" outputs/phi_card.md
