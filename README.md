@@ -45,3 +45,21 @@ Run (blinded):
 - Deterministic hashing / audit IDs (content-addressed style)
 - CI automation (GitHub Actions)
 - Research engineering discipline (controls/ablations/blinding)
+
+## Proof (reproducible run)
+
+**Goal:** reproduce a deterministic test run + verify the package installs correctly.
+
+### Commands
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python3 -m pip install --upgrade pip
+python3 -m pip install -e . pytest
+pytest -q
+
+python3 -c "import importlib; importlib.import_module('src'); print('import_ok', 'src')"
+```
+
+### Example output
+See: `docs/example_output.txt`
