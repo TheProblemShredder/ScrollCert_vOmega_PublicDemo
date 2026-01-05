@@ -1,0 +1,6 @@
+$ pytest -q
+
+no tests ran in 0.00s
+
+$ python3 -c "import importlib; m=importlib.import_module('src'); print('import_ok', m.__name__)"
+import_ok src
