@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scrollcert-vomega-publicdemo"
+version = "0.1.0"
+description = "ScrollCERT vΩ public demo: verification-first reproducibility certificate harness."
+readme = "README.md"
+requires-python = ">=3.10"
+
+[tool.setuptools.packages.find]
+where = ["."]
